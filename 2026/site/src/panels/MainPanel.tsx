@@ -18,7 +18,6 @@ const MainPanel = () => {
     const imageOne = useRef(null);
     const imageTwo = useRef(null);
     const imageThree = useRef(null);
-    const imageFour = useRef(null);
 
     const kissOne = useRef(null);
     const kissTwo = useRef(null);
@@ -32,7 +31,7 @@ const MainPanel = () => {
 
         gsap.set(btn.current, { opacity: 0, y: 20 })
 
-        gsap.set([imageOne.current, imageTwo.current, imageThree.current, imageFour.current], { opacity: 0 })
+        gsap.set([imageOne.current, imageTwo.current, imageThree.current], { opacity: 0 })
         gsap.set([kissOne.current, kissTwo.current, kissThree.current, kissFour.current, kissFive.current], { opacity: 0, y: 15 })
 
         // @ts-ignore
@@ -65,7 +64,7 @@ const MainPanel = () => {
             delay: 0,
             duration: 1.5,
             ease: "power2.inOut"
-        }).to([imageOne.current, imageTwo.current, imageThree.current, imageFour.current], {
+        }).to([imageOne.current, imageTwo.current, imageThree.current], {
             opacity: 1,
             duration: 1,
             stagger: 0.2, // Each image fades in 0.2s after the previous
@@ -156,56 +155,43 @@ const MainPanel = () => {
              {/* Images positioned around the SVG */}
             <img 
                 ref={imageOne}
-                src="https://picsum.photos/400/400" 
+                src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmVidnRpcnBvbmRlZjBheGhvZ3JnanlvOGN6NG5qNmJjNnA4ZzBqaiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/D9j761FH8SYJLyW9WO/giphy.gif" 
                 alt=""
                 style={{
                     position: 'absolute',
-                    top: '20%',
-                    left: '15%',
-                    width: '10vh',
-                    height: '10vh'
+                    top: '18%',
+                    left: '30%',
+                    width: '20vh',
+                    height: '20vh'
                 }}
             />
             
             <img 
                 ref={imageTwo}
-                src="https://picsum.photos/400/400" 
+                src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmJrNm5wOW1xYjhnY2FjNnNnY2JzYzMzaXZ5Nnk3MHJocDg5eWQyZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7EbfqFrov3nXkPgfHK/giphy.gif" 
                 alt=""
                 style={{
                     position: 'absolute',
-                    top: '24%',
-                    right: '16%',
-                    width: '10vh',
-                    height: '10vh'
-                }}
-            />
-            
-            <img 
-                ref={imageThree}
-                src="https://picsum.photos/400/400" 
-                alt=""
-                style={{
-                    position: 'absolute',
-                    bottom: '18%',
-                    left: '13%',
-                    width: '10vh',
-                    height: '10vh'
-                }}
-            />
-            
-            <img 
-                ref={imageFour}
-                src="https://picsum.photos/400/400" 
-                alt=""
-                style={{
-                    position: 'absolute',
-                    bottom: '22%',
-                    right: '17%',
-                    width: '10vh',
-                    height: '10vh'
+                    bottom: '15%',
+                    left: '17%',
+                    width: '15vh',
+                    height: '15vh'
                 }}
             />
 
+            <img 
+                ref={imageThree}
+                src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmQ2bWtmYXl3dnlmeG44NnF1M2cxeWpzOXl4aGdkaW9qOWVta2tqNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qKQQUKSSbWBkO2V3KX/giphy.gif" 
+                alt=""
+                style={{
+                    position: 'absolute',
+                    bottom: '15%',
+                    right: '17%',
+                    width: '15vh',
+                    height: '15vh'
+                }}
+            />
+            
             {/* Dot some kisses around the screen to flash up when the heart is around */}
             <svg 
                 width="26.098" 
