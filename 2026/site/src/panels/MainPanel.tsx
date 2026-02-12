@@ -29,7 +29,7 @@ const MainPanel = () => {
 
     useGSAP(() => {
 
-        gsap.set(btn.current, { opacity: 0, y: -60 })
+        gsap.set(btn.current, { opacity: 0, y: -40 })
 
         gsap.set([imageOne.current, imageTwo.current, imageThree.current], { opacity: 0 })
         gsap.set([kissOne.current, kissTwo.current, kissThree.current, kissFour.current, kissFive.current], { opacity: 0, y: 15 })
@@ -70,7 +70,7 @@ const MainPanel = () => {
             stagger: 0.2, // Each image fades in 0.2s after the previous
             ease: "power2.inOut"
         }, "-=1").to(btn.current, {
-            y: -100,
+            y: -80,
             opacity: 1,
             duration: 0.8,
             ease: "power2.out"
